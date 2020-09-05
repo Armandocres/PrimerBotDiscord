@@ -11,7 +11,7 @@ client.on('ready', () =>{
 });
 
 client.on('message', msg => {
-    if (msg.content.match("¿")) {
+    if (msg.content.match("¿") || msg.content.charAt(msg.content.length - 1) === "?") {
     //   msg.reply('En un momento te contestan');
         msg.channel.send(messageEmbed());
     }
